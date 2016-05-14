@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <link rel='stylesheet' href='/stylesheets/style.css' />
+	    <link rel='stylesheet' href='/stylesheets/dropdown.css' />
+	    
+	</head>
+   	<body>
+   	  <h1>Choose a post to manage</h1>
+   	  <p>List of Posts:</p>
+		<ul>
+		    <!--<% postName.forEach(function(post) { %>
+		        <li><%= post %> </li>
+		    <% }); %> -->
+		    <% for(var i = 0; i < postName.length; i++){ %>
+		    	<li>ID: <%= postId[i] %> &nbsp;  Title: <%= postName[i] %></li>
+		    <% } %>
+		</ul>
+		<form action="" method="post" enctype="multipart/form-data">
+         <fieldset>
+         	<label for="postId">ID</label>
+         	<input type="text" id="postId" name="postId"/>
+         	<br />
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title"/>
+            <br />
+            <label for="post">Post:</label>
+            <textarea id="post" name="post" rows="4" cols="50" placeholder="Write your post"></textarea>
+            <br />
+            <input type="submit" value="Edit" />
+         </fieldset>
+      </form>
+   	</body>
+</html>
